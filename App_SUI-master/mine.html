@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>页面基本结构</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="stylesheet" href="dist/css/sm.min.css">
+	<link rel="stylesheet" href="dist/css/sm-extend.min.css">
+	<link rel="stylesheet" href="dist/css/ionic.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+	<!-- page 集合的容器，里面可一方多个平行的.page ,其他的.page作为内联页面由路由控制展示 -->
+	<div class="page-group">
+		<!-- 单个page,第一个.page默认被展示 -->
+		<!-- .page-current标记出第一次进入的时候应该显示的页面 -->
+		<div class="page" id="mine">
+
+			<!-- 标题栏 -->
+			<header class="bar bar-nav">
+				
+				<h1 class="title">我的</h1>
+				<a class="icon ion-ios-gear-outline mine-right open-panel" data-panel='#panel-right'></a>
+			</header>
+			<div class="panel-overlay"></div>
+			<div class="panel panel-right panel-cover theme-dark" id='panel-right'>
+			  <div class="content-block">
+			  	<i class="icon ion-ios-close-empty close-panel"></i>
+			    <h2><i class="icon ion-ios-gear-outline	"></i>&nbsp;设置</h2>
+			    <!-- Click on link with "close-panel" class will close panel -->
+			    <!-- <p><a href="#" class="close-panel">关闭</a></p> -->
+			  </div>
+			  <div class="list-block">
+			    <div class="list-item">
+			    	<a href="">修改密码</a>
+			    </div>
+			    <div class="list-item">
+			    	<a href="">服务协议</a>
+			    </div>
+			    <div class="list-item">
+			    	<a href="">关于必有</a>
+			    </div>
+			    <div class="list-item">
+			    	<a href="">登出</a>
+			    </div>
+			  </div>
+			</div>
+
+
+			<div class="content fifth-content">
+			  <div class="head">
+			  	<img src="img/48.jpg" alt="">
+			  	<p>大梦子</p>
+			  </div>
+			
+			<!-- 导航栏 -->
+
+
+			<nav class="bar-tab time">
+				<a class="tab-item external" href="#">
+					<span class="icon"><img src="img/121.PNG" alt=""></span>
+					<span class="tab-label">全部订单</span>
+				</a>
+				<a class="tab-item external" href="#">
+					<span class="icon"><img src="img/71.png" alt=""></span>
+					<span class="tab-label">待付款</span>
+					<i class="badge">1</i>
+				</a>
+				<a class="tab-item external" href="#">
+					<span class="icon"><img src="img/72.png" alt=""></span>
+					<span class="tab-label">待发货</span>
+				</a>
+				<a class="tab-item external" href="#">
+					<span class="icon"><img src="img/73.png" alt=""></span>
+					<span class="tab-label">待收货</span>
+					<i class="badge">3</i>
+				</a>
+			</nav>
+			<!-- 导航栏 end -->
+
+			<!-- 功能区 -->
+			<div class="function">
+				<div class="row">
+			      <div class="col-33">
+			      	<img src="img/-54.png" alt="">
+			      	<p>我的卡券</p>
+			      </div>
+			      <div class="col-33">
+			      	<img src="img/-64.png" alt="">
+			      	<p>免费领</p>
+			      </div>
+			      <div class="col-33">
+			      	<img src="img/-98.png" alt="">
+			      	<p>收藏商品</p>
+			      </div>
+
+			    </div>
+			    <div class="row">
+			      <div class="col-33">
+			      	<img src="img/-75.png" alt="">
+			      	<p>帮助中心</p>
+			      </div>
+			      <div class="col-33">
+			      	<img src="img/-28.png" alt="">
+			      	<p>收货地址</p>
+			      </div>
+			      <div class="col-33">
+			      	<img src="img/-55.png" alt="">
+			      	<p>实名认证</p>
+			      </div>
+			      
+			    </div>
+			</div>
+			<!-- 功能区 end -->
+
+
+			<!-- 快递 -->
+
+			<div class="packge">
+				<div class="packge-bar">
+					<p>速递易</p>
+				</div>
+				<nav class="packge-nav bar-tab">
+					<a class="tab-item external active" href="#">
+						<span class="icon ion-ios-barcode-outline"></span>
+						<span class="tab-label">扫码开箱</span>
+					</a>
+					<a class="tab-item external active" href="#">
+						<span class="icon ion-ios-unlocked-outline"></span>
+						<span class="tab-label">我要取件</span>
+					</a>
+					<a class="tab-item external active" href="#">
+						<span class="icon ion-ios-paperplane-outline"></span>
+						<span class="tab-label">我要寄件</span>
+					</a>
+					<a class="tab-item external active" href="#">
+						<span class="icon ion-ios-filing-outline"></span>
+						<span class="tab-label">物品存放</span>
+					</a>
+					<a class="tab-item external active" href="#">
+						<span class="icon ion-ios-search"></span>
+						<span class="tab-label">查询快递</span>
+					</a>
+				</nav>
+			</div>
+			<!-- 快递  end-->
+			
+
+
+
+				
+			</div>
+			<!-- 工具栏 -->
+			<nav class="bar bar-tab mine-footer footer">
+				<a class="tab-item external" href="home.html">
+					<span class="icon ion-ios-home"></span>
+					<span class="tab-label">首页</span>
+				</a>
+				<a class="tab-item external" href="#">
+					<span class="icon ion-ios-people"></span>
+					<span class="tab-label">生活家</span>
+				</a>
+				<a class="tab-item external" href="#">
+					<span class="icon ion-ios-cart"></span>
+					<span class="tab-label">购物车</span>
+					<i class="badge">1</i>
+				</a>
+				<a class="tab-item external" href="#">
+					<span class="icon ion-ios-keypad"></span>
+					<span class="tab-label">分类</span>
+				</a>
+				<a class="tab-item external active" href="#">
+					<span class="icon ion-ios-person"></span>
+					<span class="tab-label">我的</span>
+				</a>
+			</nav>	
+		</div>
+	</div>
+
+
+
+	<script type='text/javascript' src='dist/js/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='dist/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='dist/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/script.js' charset='utf-8'></script>
+</body>
+</html>

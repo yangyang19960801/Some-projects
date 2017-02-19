@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>页面基本结构</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="stylesheet" href="dist/css/sm.min.css">
+	<link rel="stylesheet" href="dist/css/sm-extend.min.css">
+	<link rel="stylesheet" href="dist/css/ionic.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+	<!-- page 集合的容器，里面可一方多个平行的.page ,其他的.page作为内联页面由路由控制展示 -->
+	<div class="page-group">
+		<!-- 单个page,第一个.page默认被展示 -->
+		<!-- .page-current标记出第一次进入的时候应该显示的页面 -->
+		<div class="page" id="home">
+
+			<!-- 标题栏 -->
+			<header class="bar bar-nav">
+				
+				<h1 class="title">Logo</h1>
+				<a class="icon ion-ios-search-strong pull-right open-panel"></a>
+			</header>
+			
+
+			<div class="content fir-content">
+			  <!-- Slider -->
+			  <div class="swiper-container">
+			    <div class="swiper-wrapper">
+			      <div class="swiper-slide"><img src="img/77.jpg" alt=""></div>
+			      <div class="swiper-slide"><img src="img/79.jpg" alt=""></div>
+			      <div class="swiper-slide"><img src="img/74.jpg" alt=""></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			  </div>
+			
+			<!-- 导航栏 -->
+
+
+			<nav class="bar-tab nav-list">
+				<a class="tab-item external active" href="#">
+					<span class="icon"><img src="img/-24.png" alt=""></span>
+					<span class="tab-label">扫码开箱</span>
+				</a>
+				<a class="tab-item external active" href="#">
+					<span class="icon"><img src="img/-16.png" alt=""></span>
+					<span class="tab-label">取件列表</span>
+				</a>
+				<a class="tab-item external active" href="#">
+					<span class="icon"><img src="img/-05.png" alt=""></span>
+					<span class="tab-label">物品存放</span>
+				</a>
+				<a class="tab-item external active to-list">
+					<span class="icon"><img src="img/-55.png" alt=""></span>
+					<span class="tab-label">分类列表</span>
+				</a>
+				<a class="tab-item external active" href="#">
+					<span class="icon"><img src="img/-28.png" alt=""></span>
+					<span class="tab-label">查询快递</span>
+				</a>
+			</nav>
+			<!-- 导航栏 end -->
+
+
+
+
+			<!-- 商品展示 -->
+
+			<div class="product">
+				<div class="content-padded grid-demo">
+				    <div class="row no-gutter">
+				      <div class="col-50">
+				      	<img src="img/10.jpg" alt="">
+				      </div>
+				      <div class="col-50">
+				      	<div class="row">
+					      	<div class="col-50">
+					      		<img src="img/25.jpg" alt="">
+					      	</div>
+					      	<div class="col-50">
+					      		<img src="img/26.jpg" alt="">
+					      	</div>
+					    </div>
+						<div class="row">
+					      	<div class="col-50">
+					      		<img src="img/26.jpg" alt="">
+					      	</div>
+					      	<div class="col-50">
+					      		<img src="img/25.jpg" alt="">
+					      	</div>
+				      	</div>
+				      </div>
+
+				      
+				  </div>
+				  	
+			  </div>
+		  	<div class="content-padded grid-demo second">
+		  		<div class="row no-gutter">
+			  	  <div class="col-50">
+			    	<img src="img/28.jpg" alt="">
+			      </div>
+			      <div class="col-50">
+			    	<img src="img/29.png" alt="">
+			      </div>
+			  	</div>
+			</div>
+			</div>
+			<!-- 商品展示 end-->
+
+
+			<!-- 今日特卖 -->
+			<div class="hot-sell">
+				<div class="words">
+					<h2><span class="icon ion-ios-flame"></span>&nbsp;今日特卖</h2>
+				</div>
+				<div class="items">
+					<a href=""><img src="img/1.jpg" alt=""></a>
+					<a href=""><img src="img/19.jpg" alt=""></a>
+					<a href=""><img src="img/15.jpg" alt=""></a>
+					<a href=""><img src="img/18.jpg" alt=""></a>
+					<a href=""><img src="img/16.jpg" alt=""></a>
+					<a href=""><img src="img/17.jpg" alt=""></a>
+				</div>
+			</div>
+
+			<!-- 今日特卖 end -->
+				
+			</div>
+			<!-- 工具栏 -->
+			<nav class="bar bar-tab footer">
+				<a class="tab-item external active" href="#">
+					<span class="icon ion-ios-home"></span>
+					<span class="tab-label">首页</span>
+				</a>
+				<a class="tab-item external" href="#">
+					<span class="icon ion-ios-people"></span>
+					<span class="tab-label">生活家</span>
+				</a>
+				<a class="tab-item external to-chart">
+					<span class="icon ion-ios-cart"></span>
+					<span class="tab-label">购物车</span>
+					<i class="badge">1</i>
+				</a>
+				<a class="tab-item external " href="#">
+					<span class="icon ion-ios-keypad to-list"></span>
+					<span class="tab-label">分类</span>
+				</a>
+				<a class="tab-item external to-mine">
+					<span class="icon ion-ios-person"></span>
+					<span class="tab-label">我的</span>
+				</a>
+			</nav>	
+		</div>
+	</div>
+
+
+	<script type='text/javascript' src='dist/js/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='dist/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='dist/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/script.js' charset='utf-8'></script>
+
+	<script>
+		$(function(){
+			$(".to-mine").click(function(){
+				window.open("mine.html","_self")
+
+			})
+			$(".to-list").click(function(){
+				window.open("list.html","_self")
+
+			})
+			$(".to-chart").click(function(){
+				window.open("chart.html","_self")
+
+			})
+		});
+	</script>
+</body>
+</html>

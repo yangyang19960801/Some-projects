@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品无限加载</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="dist/css/ionic.min.css">
+	<link rel="stylesheet" href="dist/css/sm.min.css">
+	<link rel="stylesheet" href="dist/css/sm-extend.min.css">
+
+	
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="page-group">
+		<div class="page">
+			<div class="content .img-list">
+				<div class="row">
+					<div class="col-50"></div>
+					<div class="col-50"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<script type='text/javascript' src='dist/js/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='dist/js/tools.js' charset='utf-8'></script>
+	<script type='text/javascript' src='dist/js/jquery-1.10.1.min.js' charset='utf-8'></script>
+	<script src="dist/js/iscroll.js"></script>
+	<script type='text/javascript' src='dist/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='dist/js/sm-extend.min.js' charset='utf-8'></script>
+	<!-- <script type='text/javascript' src='js/script.js' charset='utf-8'></script> -->
+	<script>
+		$(function(){
+			var imgId=1;
+			var onOff = true;
+			goodsGet(imgId);
+			function goodsGet(imgId){
+				onOff=false;
+				$.ajax({
+					type:"get",
+					url:"data.json",
+					dataType:"json",
+					data:{imgID:imgId},
+
+					success:function(data){
+						$.each(data,function(i){
+							var oImg=$('<div class="row" id="'+data[i].imgId+'">'
+					+'<div class="col-50">'+'<img src='+data[i].imgUrl+' />'+'</div>'+'<div class="col-50">'+'<img src='+data[i].imgUrl+' />'+'</div>'+'</div>');
+
+							var oRow=$('<div class="row" id="'+data[i].imgId+'">'+'</div>');
+							oRow.append(oImg);
+						})
+
+					}
+				})
+			}
+
+			
+			
+		});
+	</script>
+</body>
+</html>
